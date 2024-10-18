@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --blue: hsl(238, 40%, 52%);
+  --Red: hsl(358, 79%, 66%);
+  --Light-grayish-blue: hsl(239, 57%, 85%);
+  --Pale-red: hsl(357, 100%, 86%);
+
+  --Dark-blue: hsl(212, 24%, 26%);
+  --Grayish-Blue: hsl(211, 10%, 45%);
+  --Light-gray: hsl(223, 19%, 93%);
+  --Very-light-gray: hsl(228, 33%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: var(--Very-light-gray);
+  height: 100%;
+  padding: 1em;
+  align-items: center;
+  display: grid;
+  place-items: center;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+* {
+  font-family: "Rubik", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.commentContainer {
+  padding: 1.5em;
+  border-radius: 10px;
+  display: flex;
+  gap: 20px;
+  width: 600px;
+  background-color: var(--White);
+}
+.details {
+  display: grid;
+  gap: 20px;
+}
+.user-content {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--Grayish-Blue);
+}
+
+.userImageContainer {
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.image {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reply {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  font-size: 16px;
+  text-transform: capitalize;
+  color: var(--blue);
+  font-weight: 500;
+}
+
+#comments {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* likes counter */
+
+.likes {
+  padding: 15px;
+  background-color: var(--Light-gray);
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  width: 40px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.likesBtn:hover > .likeIncrement {
+  transition: 0.2s all ease-in;
+  fill: var(--Dark-blue);
+}
+
+/* users */
+.username {
+  color: var(--Dark-blue);
+}
+.time {
+  color: var(--Grayish-Blue);
+}
+.userTextArea {
+  width: 100%;
+  border: 1.5px solid var(--Light-grayish-blue);
+  border-radius: 10px;
+  resize: none;
+  padding: 1em;
+}
+
+.userSubmit{
+  height: fit-content;
+  background-color: var(--blue);
+  padding: 10px 20px;
+  /* font-size: 16px; */
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--White);
+  border-radius: 5px;
+}
+
+/* replies-container */
+.repliesContainer{
+  width: 550px;
+  align-self: flex-end;
+}
+
+.repl{
+  color: var(--blue);
+  font-weight: 500;
+}
